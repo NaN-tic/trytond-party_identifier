@@ -16,8 +16,9 @@ class Party:
 
     def get_identifier_code(self, name):
         if self.identifiers:
-            identifier, = self.identifiers
-            return identifier.code
+            identifiers = self.identifiers
+            if identifiers:
+                return identifiers[0].code
 
     @classmethod
     def search_identifier_code(cls, name, clause):
