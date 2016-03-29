@@ -5,10 +5,10 @@ from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 
 __all__ = ['Party']
-__metaclass__ = PoolMeta
 
 
 class Party:
+    __metaclass__ = PoolMeta
     __name__ = 'party.party'
     identifier_code = fields.Function(fields.Char('Identifier Code'),
         'get_identifier_code', setter='set_identifer_code',
