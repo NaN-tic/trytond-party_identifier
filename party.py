@@ -7,8 +7,7 @@ from trytond.pool import Pool, PoolMeta
 __all__ = ['Party']
 
 
-class Party:
-    __metaclass__ = PoolMeta
+class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
     identifier_code = fields.Function(fields.Char('Identifier Code'),
         'get_identifier_code', setter='set_identifer_code',
