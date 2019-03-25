@@ -5,3 +5,7 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 msgctxt "field:party.party,identifier_code:"
 msgid "Identifier Code"
 msgstr "Codi identificador"
+
+msgctxt "selection:party.identifier,type:"
+msgid "EU not VAT"
+msgstr "CIF/NIF no Europeu"
