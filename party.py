@@ -4,12 +4,12 @@
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 
-__all__ = ['Party']
+__all__ = ['Party', 'PartyIdentifier']
 
 
 class Party:
-    __metaclass__ = PoolMeta
     __name__ = 'party.party'
+    __metaclass__ = PoolMeta
     identifier_code = fields.Function(fields.Char('Identifier Code'),
         'get_identifier_code', setter='set_identifer_code',
         searcher='search_identifier_code')
@@ -42,3 +42,13 @@ class Party:
                             'party': party,
                             'code': value,
                             }])
+
+
+class PartyIdentifier:
+    __metaclass__ = PoolMeta
+    __name__ = 'party.identifier'
+
+    @classmethod
+    def get_types(cls):
+        return super(PartyIdentifier, cls).get_types() + [
+            ('eu_not_vat', 'EU not VAT')]

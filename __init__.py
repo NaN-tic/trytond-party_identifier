@@ -8,4 +8,5 @@ from . import party
 def register():
     Pool.register(
         party.Party,
+        party.PartyIdentifier,
         module='party_identifier', type_='model')
