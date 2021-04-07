@@ -7,6 +7,6 @@ from . import party
 
 def register():
     Pool.register(
+        party.Configuration,
         party.Party,
-        party.PartyIdentifier,
         module='party_identifier', type_='model')
